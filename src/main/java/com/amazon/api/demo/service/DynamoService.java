@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.amazon.api.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +17,7 @@ public class DynamoService {
 	}
 
 	public String getTables() {
-		ListTablesResult listTables = amazonDynamoDb.listTables();
-		return listTables.getTableNames().toString();
+		return amazonDynamoDb.listTables().getTableNames().toString();
 	}
 
 }

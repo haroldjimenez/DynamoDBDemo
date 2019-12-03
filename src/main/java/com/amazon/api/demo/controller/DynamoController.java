@@ -1,16 +1,16 @@
-package com.example.demo.controller;
+package com.amazon.api.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.amazon.api.demo.service.DynamoService;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.model.ListTablesResult;
-import com.example.demo.service.DynamoService;
 
 @RestController
 @RequestMapping(path = "/dynamodb")
@@ -27,6 +27,11 @@ public class DynamoController {
 	
 	@RequestMapping(method = RequestMethod.GET,path = "/getTables")
 	public String getTables() {
+		return dynamoService.getTables();
+	}
+	
+	@RequestMapping(method = RequestMethod.GET,path = "/getTables")
+	public String getTables2() {
 		return dynamoService.getTables();
 	}
 	

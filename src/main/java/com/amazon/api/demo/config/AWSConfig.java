@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.amazon.api.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
