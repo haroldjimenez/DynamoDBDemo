@@ -27,11 +27,7 @@ public class DynamoController {
 	
 	@RequestMapping(method = RequestMethod.GET,path = "/getTables")
 	public String getTables() {
-		return dynamoService.getTables();
-	}
-	
-	@RequestMapping(method = RequestMethod.GET,path = "/getTables")
-	public String getTables2() {
+
 		return dynamoService.getTables();
 	}
 	
